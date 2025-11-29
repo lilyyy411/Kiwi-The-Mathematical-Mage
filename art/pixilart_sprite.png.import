@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c08o04jcaj2ym"
-path="res://.godot/imported/Path-Straight.png-d4553e0d183dd25708de1b2dc73c29ac.ctex"
+uid="uid://bbb2pa8hcm5oc"
+path="res://.godot/imported/pixilart_sprite.png-bb3f409cb85f5a40c1f79b624339cc27.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/Path-Straight.png"
-dest_files=["res://.godot/imported/Path-Straight.png-d4553e0d183dd25708de1b2dc73c29ac.ctex"]
+source_file="res://art/pixilart_sprite.png"
+dest_files=["res://.godot/imported/pixilart_sprite.png-bb3f409cb85f5a40c1f79b624339cc27.ctex"]
 
 [params]
 

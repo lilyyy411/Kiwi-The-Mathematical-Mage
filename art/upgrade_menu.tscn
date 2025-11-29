@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://b33tyie7nt1ll"]
 
 [ext_resource type="Script" uid="uid://bdaw6o5n7sott" path="res://art/upgrade_menu.gd" id="1_cpgeo"]
-[ext_resource type="Shader" uid="uid://cda0eor1qtote" path="res://PauseMenu.gdshader" id="1_jgaba"]
+[ext_resource type="Shader" uid="uid://cda0eor1qtote" path="res://pause_menu.gdshader" id="1_jgaba"]
 [ext_resource type="TileSet" uid="uid://bu17lji3bqju8" path="res://art/menu.tres" id="2_cpgeo"]
 [ext_resource type="Texture2D" uid="uid://cf3nh4knighna" path="res://art/fireball_spell_card.png" id="3_qoy4f"]
 

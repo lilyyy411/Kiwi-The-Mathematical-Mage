@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://ctlvh5xp0b35v" path="res://main_menu.gd" id="1_i26rj"]
 [ext_resource type="Texture2D" uid="uid://cgpj3dasxadii" path="res://art/content.png" id="2_eiy7p"]
-[ext_resource type="Shader" uid="uid://cda0eor1qtote" path="res://PauseMenu.gdshader" id="3_h7a2f"]
+[ext_resource type="Shader" uid="uid://cda0eor1qtote" path="res://pause_menu.gdshader" id="3_h7a2f"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_qoqlk"]
 shader = ExtResource("3_h7a2f")
@@ -21,7 +21,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_i26rj")
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="BackgroundTextureRect" type="TextureRect" parent="."]
 layout_mode = 0
 offset_left = -4.0
 offset_top = -85.0
@@ -29,7 +29,7 @@ offset_right = 1612.0
 offset_bottom = 939.0
 texture = ExtResource("2_eiy7p")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="SelectionVBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.059027776
@@ -43,7 +43,7 @@ offset_bottom = -613.8889
 grow_vertical = 0
 metadata/_edit_use_anchors_ = true
 
-[node name="StartButton" type="Button" parent="VBoxContainer"]
+[node name="StartButton" type="Button" parent="SelectionVBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 focus_neighbor_top = NodePath("../QuitButton")
@@ -51,19 +51,19 @@ theme_override_font_sizes/font_size = 30
 text = "Start
 "
 
-[node name="OptionsButton" type="Button" parent="VBoxContainer"]
+[node name="OptionsButton" type="Button" parent="SelectionVBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 30
 text = "Options"
 
-[node name="QuitButton" type="Button" parent="VBoxContainer"]
+[node name="QuitButton" type="Button" parent="SelectionVBoxContainer"]
 layout_mode = 2
 focus_neighbor_bottom = NodePath("../StartButton")
 theme_override_font_sizes/font_size = 30
 text = "Quit
 "
 
-[node name="VBoxContainer2" type="VBoxContainer" parent="."]
+[node name="ProblemStyleVBoxContainer" type="VBoxContainer" parent="."]
 material = SubResource("ShaderMaterial_qoqlk")
 layout_mode = 1
 anchors_preset = -1
@@ -78,44 +78,44 @@ offset_bottom = -113.888916
 grow_vertical = 0
 metadata/_edit_use_anchors_ = true
 
-[node name="label" type="Label" parent="VBoxContainer2"]
+[node name="Label" type="Label" parent="ProblemStyleVBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 40
 text = "Problem Style"
 horizontal_alignment = 1
 
-[node name="Additon" type="Button" parent="VBoxContainer2"]
+[node name="AdditionButton" type="Button" parent="ProblemStyleVBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-focus_neighbor_top = NodePath("../Multipication")
+focus_neighbor_top = NodePath("../MultiplicationButton")
 theme_override_font_sizes/font_size = 30
-text = "Addtion
+text = "Addition
 +
 "
 
-[node name="Subtraction" type="Button" parent="VBoxContainer2"]
+[node name="SubtractionButton" type="Button" parent="ProblemStyleVBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_font_sizes/font_size = 30
 text = "Subtraction
 -"
 
-[node name="Multipication" type="Button" parent="VBoxContainer2"]
+[node name="MultiplicationButton" type="Button" parent="ProblemStyleVBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-focus_neighbor_bottom = NodePath("../Additon")
+focus_neighbor_bottom = NodePath("../AdditionButton")
 theme_override_font_sizes/font_size = 30
-text = "Multipication
-*
+text = "Multiplication
+×
 "
 
-[node name="Division" type="Button" parent="VBoxContainer2"]
+[node name="DivisionButton" type="Button" parent="ProblemStyleVBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-focus_neighbor_bottom = NodePath("../Additon")
+focus_neighbor_bottom = NodePath("../AdditionButton")
 theme_override_font_sizes/font_size = 30
 text = "Division
-/"
+÷"
 
-[connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
-[connection signal="pressed" from="VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="SelectionVBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="SelectionVBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]

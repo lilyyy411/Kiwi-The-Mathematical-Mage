@@ -1,9 +1,9 @@
 [gd_resource type="TileSet" load_steps=3 format=3 uid="uid://8et0wkid5sxn"]
 
-[ext_resource type="Texture2D" uid="uid://bbb2pa8hcm5oc" path="res://art/pixilart-sprit.png" id="1_apd0a"]
+[ext_resource type="Texture2D" uid="uid://bbb2pa8hcm5oc" path="res://art/pixilart_sprite.png" id="1_2hbj6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bewc2"]
-texture = ExtResource("1_apd0a")
+texture = ExtResource("1_2hbj6")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 1:0/0 = 0

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b8teqbhr0ubln"
-path="res://.godot/imported/Path-Right.png-3b1a4fa1a0487a3299a390edde9f8d0c.ctex"
+uid="uid://vkh811kit38i"
+path="res://.godot/imported/wood_background.jpg-01ff6331a86cb8f9e58256da0606ee1b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/Path-Right.png"
-dest_files=["res://.godot/imported/Path-Right.png-3b1a4fa1a0487a3299a390edde9f8d0c.ctex"]
+source_file="res://art/wood_background.jpg"
+dest_files=["res://.godot/imported/wood_background.jpg-01ff6331a86cb8f9e58256da0606ee1b.ctex"]
 
 [params]
 
