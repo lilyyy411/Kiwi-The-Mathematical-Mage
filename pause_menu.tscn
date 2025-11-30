@@ -5,7 +5,7 @@
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_nwcfo"]
 shader = ExtResource("2_nwcfo")
-shader_parameter/blur = 0.0
+shader_parameter/blur = 0.800000038
 
 [node name="PauseMenu" type="Control"]
 process_mode = 3
