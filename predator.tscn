@@ -1,14 +1,14 @@
 [gd_scene load_steps=7 format=3 uid="uid://d3h8b546qk6i5"]
 
-[ext_resource type="Script" uid="uid://b8y358e02k8ip" path="res://mob_1.gd" id="1_8w7hd"]
-[ext_resource type="Texture2D" uid="uid://citvb201b84sx" path="res://art/stoatsprite.png" id="2_8w7hd"]
+[ext_resource type="Script" uid="uid://b8y358e02k8ip" path="res://predator.gd" id="1_addl1"]
+[ext_resource type="Texture2D" uid="uid://citvb201b84sx" path="res://art/stoatsprite.png" id="2_8or0i"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rdqm6"]
-atlas = ExtResource("2_8w7hd")
+atlas = ExtResource("2_8or0i")
 region = Rect2(0, 0, 100, 100)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8u4tx"]
-atlas = ExtResource("2_8w7hd")
+atlas = ExtResource("2_8or0i")
 region = Rect2(100, 0, 100, 100)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_eln2t"]
@@ -41,13 +41,12 @@ size = Vector2(41, 23)
 [node name="Mob1" type="RigidBody2D"]
 collision_mask = 0
 gravity_scale = 0.0
-script = ExtResource("1_8w7hd")
+script = ExtResource("1_addl1")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_eln2t")
 animation = &"move"
-frame_progress = 0.9550666
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-13.5, -1.5)

@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cfvf6f48oieqy" path="res://game.gd" id="1_j5wjh"]
 [ext_resource type="PackedScene" uid="uid://b70kgle12qbtf" path="res://user_interface.tscn" id="2_7jktm"]
-[ext_resource type="PackedScene" uid="uid://d3h8b546qk6i5" path="res://mob_1.tscn" id="2_fc0e3"]
+[ext_resource type="PackedScene" uid="uid://d3h8b546qk6i5" path="res://predator.tscn" id="2_fc0e3"]
 [ext_resource type="TileSet" uid="uid://8et0wkid5sxn" path="res://art/tileset.tres" id="3_hve3p"]
 [ext_resource type="Script" uid="uid://dcxl5a2bw8t7q" path="res://enemy_1_spawn.gd" id="5_7jktm"]
 
