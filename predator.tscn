@@ -3,13 +3,13 @@
 [ext_resource type="Script" uid="uid://b8y358e02k8ip" path="res://predator.gd" id="1_addl1"]
 [ext_resource type="Texture2D" uid="uid://citvb201b84sx" path="res://art/stoatsprite.png" id="2_8or0i"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_rdqm6"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_addl1"]
 atlas = ExtResource("2_8or0i")
-region = Rect2(0, 0, 100, 100)
+region = Rect2(0, 0, 48, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_8u4tx"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_8or0i"]
 atlas = ExtResource("2_8or0i")
-region = Rect2(100, 0, 100, 100)
+region = Rect2(48, 0, 48, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_eln2t"]
 animations = [{
@@ -25,10 +25,10 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_rdqm6")
+"texture": SubResource("AtlasTexture_addl1")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_8u4tx")
+"texture": SubResource("AtlasTexture_8or0i")
 }],
 "loop": true,
 "name": &"move",
@@ -46,11 +46,7 @@ script = ExtResource("1_addl1")
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_eln2t")
 animation = &"move"
+frame_progress = 0.7863967
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-13.5, -1.5)
 shape = SubResource("RectangleShape2D_u54e6")
-
-[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
-position = Vector2(2, 1)
-rect = Rect2(-36, -14, 41, 23)
