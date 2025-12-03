@@ -21,6 +21,5 @@ func _on_spell_3_pressed() -> void:
 func _on_spell_4_pressed() -> void:
 	print("Casting Spell 4")
 
-
-func _on_mob_timer_timeout():
+func _on_spawn_timer_timeout():
 	$EnemyPath.add_child(mob_scene.instantiate())
