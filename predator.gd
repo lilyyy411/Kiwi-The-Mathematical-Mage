@@ -1,4 +1,4 @@
-extends RigidBody2D
+extends Area2D
 
 func _ready() -> void:
 	$AnimatedSprite2D.animation = "move"
