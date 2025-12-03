@@ -3,9 +3,6 @@ extends Node
 @export var mob_scene: PackedScene
 var score
 
-func _ready() -> void:
-	$MobTimer.start()
-
 func _on_pause_pressed() -> void:
 	print("Pause Pressed")
 
