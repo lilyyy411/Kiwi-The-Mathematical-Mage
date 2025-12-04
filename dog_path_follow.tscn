@@ -8,5 +8,6 @@ rotates = false
 loop = false
 script = ExtResource("1_4xl2x")
 speed = 25.0
+health = 125
 
 [node name="Dog" parent="." instance=ExtResource("2_4xl2x")]
