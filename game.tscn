@@ -6,7 +6,7 @@
 
 [sub_resource type="Curve2D" id="Curve2D_feb5d"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 1273.6318, 80, 0, 0, 0, 0, 971.1443, 80, 0, 0, 0, 0, 971.1443, 304, 0, 0, 0, 0, 493.53232, 304, 0, 0, 0, 0, 493.53232, 432, 0, 0, 0, 0, 111.44279, 432, 0, 0, 0, 0, 111.44279, 304, 0, 0, 0, 0, 63.68159, 304)
+"points": PackedVector2Array(0, 0, 0, 0, 1280, 80, 0, 0, 0, 0, 976, 80, 0, 0, 0, 0, 976, 304, 0, 0, 0, 0, 496, 304, 0, 0, 0, 0, 496, 432, 0, 0, 0, 0, 112, 432, 0, 0, 0, 0, 112, 304, 0, 0, 0, 0, 64, 304)
 }
 point_count = 8
 
@@ -37,7 +37,6 @@ tile_map_data = PackedByteArray("AAAAAAIAAAAIAAAAAAAAAAMAAAAIAAAAAAAAAAQAAAAIAAA
 tile_set = ExtResource("3_hve3p")
 
 [node name="StoatPath" type="Path2D" parent="."]
-scale = Vector2(1.005, 1)
 curve = SubResource("Curve2D_feb5d")
 
 [node name="CatPath" type="Path2D" parent="."]
