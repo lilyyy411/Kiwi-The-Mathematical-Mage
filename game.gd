@@ -16,5 +16,10 @@ func _on_spell_4_pressed() -> void:
 	print("Casting Spell 4")
 
 func _on_spawn_timer_timeout() -> void:
-	var scene: Resource = preload("res://predator_path_follow.tscn")
-	$EnemyPath.add_child(scene.instantiate())
+	var stoatScene: Resource = preload("res://stoat_path_follow.tscn")
+	var catScene: Resource = preload("res://cat_path_follow.tscn")
+	var dogScene: Resource = preload("res://dog_path_follow.tscn")
+	
+	$StoatPath.add_child(stoatScene.instantiate())
+	$CatPath.add_child(catScene.instantiate())
+	$DogPath.add_child(dogScene.instantiate())
