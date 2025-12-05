@@ -16,21 +16,24 @@ var spells = {
 		"damage": 20,  # Damage per tick
 		"radius": 75,
 		"color": Color.RED,
-		"type": "dot"  # Damage over time
+		"type": "dot",  # Damage over time
+		"texture": preload("res://art/burn_effect.png")
 	},
 	"ice_blast": {
 		"name": "Ice Blast",
 		"damage": 30,
 		"radius": 100,
 		"color": Color.CYAN,
-		"type": "freeze"
+		"type": "freeze",
+		"texture": preload("res://art/freeze_effect.png")
 	},
 	"lightning": {
 		"name": "Lightning",
 		"damage": 50,  # Damage per enemy hit
 		"radius": 25,
 		"color": Color.YELLOW,
-		"type": "chain"  # Hits nearby enemies
+		"type": "chain",  # Hits nearby enemies
+		"texture": preload("res://art/charge_effect.png")
 	}
 }
 
@@ -64,19 +67,40 @@ func cast_spell_at(position: Vector2):
 
 func create_spell_effect(pos: Vector2, spell: Dictionary):
 	# Create a simple circle visual effect
-	var effect = ColorRect.new()
-	effect.size = Vector2(spell["radius"] * 2, spell["radius"] * 2)
-	effect.position = pos - effect.size / 2
-	effect.color = spell["color"]
-	effect.color.a = 0.5
+	var sprite := Sprite2D.new()
+	sprite.texture = spell["texture"]
+
+	# Center the image on the clicked position
+	sprite.position = pos
+
+	# --- SCALE TO MATCH PREVIOUS SIZE ---
+	var tex_size = sprite.texture.get_size()
+	var target_size = spell["radius"] * 2
+	var scale_factor = target_size / tex_size.x  # assuming square image
 	
-	# Add to scene
-	get_tree().root.add_child(effect)
-	
-	# Animate and remove
+	sprite.scale = Vector2(scale_factor, scale_factor)
+
+	sprite.modulate.a = 0.7
+
+	get_tree().root.add_child(sprite)
+
+	# --- ANIMATE ---
 	var tween = create_tween()
-	tween.tween_property(effect, "modulate:a", 0.0, 0.5)
-	tween.tween_callback(effect.queue_free)
+	tween.tween_property(sprite, "modulate:a", 0.0, 0.5)
+	tween.tween_callback(sprite.queue_free)
+	#var effect = TextureRect.new()
+	#effect.size = Vector2(spell["radius"] * 2, spell["radius"] * 2)
+	#effect.position = pos - effect.size / 2
+	#effect.color = spell["color"]
+	#effect.color.a = 0.5
+	#
+	## Add to scene
+	#get_tree().root.add_child(effect)
+	#
+	## Animate and remove
+	#var tween = create_tween()
+	#tween.tween_property(effect, "modulate:a", 0.0, 0.5)
+	#tween.tween_callback(effect.queue_free)
 
 func deal_damage_in_radius(pos: Vector2, radius: float, damage: int):
 	# Get all enemies in the "enemies" group
