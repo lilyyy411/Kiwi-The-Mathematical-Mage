@@ -3,13 +3,13 @@
 [ext_resource type="Script" uid="uid://bno6n51sjd8rw" path="res://dog.gd" id="1_kb3ao"]
 [ext_resource type="Texture2D" uid="uid://b41gvvt4fil0r" path="res://art/temp-mob1.png" id="2_kb3ao"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ptela"]
-atlas = ExtResource("2_kb3ao")
-region = Rect2(0, 0, 16, 16)
+[sub_resource type="AtlasTexture" id="AtlasTexture_kb3ao"]
+atlas = ExtResource("1_c5eso")
+region = Rect2(0, 0, 100, 100)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ngebd"]
-atlas = ExtResource("2_kb3ao")
-region = Rect2(64, 0, 16, 16)
+[sub_resource type="AtlasTexture" id="AtlasTexture_ptela"]
+atlas = ExtResource("1_c5eso")
+region = Rect2(100, 0, 100, 100)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_eln2t"]
 animations = [{
@@ -25,10 +25,10 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ptela")
+"texture": SubResource("AtlasTexture_kb3ao")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ngebd")
+"texture": SubResource("AtlasTexture_ptela")
 }],
 "loop": true,
 "name": &"move",
