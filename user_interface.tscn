@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://b70kgle12qbtf"]
+[gd_scene load_steps=14 format=3 uid="uid://b70kgle12qbtf"]
 
 [ext_resource type="Texture2D" uid="uid://catgncy65dwol" path="res://art/tree_background.jpg" id="1_o5bw5"]
 [ext_resource type="Script" uid="uid://c7r0acxyw82o4" path="res://user_interface.gd" id="1_r3lf1"]
@@ -193,16 +193,23 @@ alignment = 1
 texture_filter = 1
 layout_mode = 2
 icon = ExtResource("4_jn6nv")
+script = ExtResource("6_f4522")
 
 [node name="SpellButton2" type="Button" parent="BottomHUD/SpellContainer"]
 texture_filter = 1
 layout_mode = 2
-icon = ExtResource("6_f4522")
+icon = ExtResource("4_jn6nv")
+script = ExtResource("7_q287o")
 
 [node name="SpellButton3" type="Button" parent="BottomHUD/SpellContainer"]
 texture_filter = 1
 layout_mode = 2
-icon = ExtResource("7_q287o")
+icon = ExtResource("4_jn6nv")
+script = ExtResource("8_q4f8x")
+
+[node name="SpellButton4" type="Button" parent="BottomHUD/SpellContainer"]
+layout_mode = 2
+icon = ExtResource("4_jn6nv")
 
 [node name="PauseMenu" parent="." instance=ExtResource("6_hsgek")]
 visible = false

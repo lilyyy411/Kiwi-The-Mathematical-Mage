@@ -17,6 +17,7 @@ config/icon="res://icon.svg"
 
 [autoload]
 
+SpellManager="*res://spell_manager.gd"
 Global="*res://global.gd"
 
 [display]
